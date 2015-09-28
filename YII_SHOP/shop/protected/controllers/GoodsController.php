@@ -53,10 +53,11 @@ class GoodsController extends Controller
 		// echo "i want to login!";
 		// echo $id;
 		
-		// $goods_infos=Goods::model()->getGoodsinfoByPk($id);
+		$goods_infos=Goods::model()->getGoodsinfoByPk($id);
    	    
-		 $goods_infos=Goods::model()->findByPk($id);
-		
+		// $goods_infos=Goods::model()->findByPk($id);
+		// echo 'controller'.$id."<br />";
+		// echo  "controller".$goods_infos->goods_name."<br />";
 		//变量缓存
 		$this->render('detail',array('goods_infos_view'=>$goods_infos));
 

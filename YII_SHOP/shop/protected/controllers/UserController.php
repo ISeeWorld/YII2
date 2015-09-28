@@ -51,7 +51,7 @@ class UserController extends Controller
 		// $this->render('index');
 		// echo "i want to login!";
     //
-    yii::beginProfile('LOGINTIME'); 
+    // yii::beginProfile('LOGINTIME'); 
 		$userlogin_model=new LoginForm;
 
 		if (isset($_POST['LoginForm'])) {
@@ -68,7 +68,7 @@ class UserController extends Controller
 		}
 		
 		// }
-    yii::endProfile('LOGINTIME'); 
+    // yii::endProfile('LOGINTIME'); 
 
 		$this->render('login',array('userlogin_model_view'=>$userlogin_model));
 	}

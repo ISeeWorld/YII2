@@ -123,18 +123,24 @@ class Goods extends CActiveRecord
     function getGoodsinfoByPk($id)
    {
 
-   	$goods_info_id=Yii::app()->cache->get('goods_info'.$id);
-   	if (!empty($goods_info_id)) 
+   	$goods_infos_id=Yii::app()->cache->get('goods_infos'.$id);
+   	if (!empty($goods_infos_id)) 
    	{
-   		return $goods_info_id;
+   		echo 'mondel empty'.$id;
+   		return $goods_infos_id;
    	}
    	
    	
-   	$sql="select * from {{goods}} where goods_id='$id'";
-   	$goods_info=$this->findBySql($sql);
-    Yii::app()->cache->set('goods_info',$goods_info,3600);
-   
-   	return $good_info;
+   	 $sql="select * from {{goods}} where goods_id=$id";
+   	 /**
+   	  * SQL语句书写问题需要注意
+   	  */
+   	 $goods_infos=$this->findBySql($sql);
+   	// $goods_infos=$this->findByPk($id);
+    Yii::app()->cache->set('goods_infos',$goods_infos,3600);
+ //    echo 'mondeL'.$id. "<br />";
+	// echo  "modeL".$goods_infos->goods_name."<br />";
+   	return $goods_infos;
 
    }
 
