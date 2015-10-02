@@ -45,16 +45,28 @@ return array(
 		//2015年9月27日21:10:53
 		//开启缓存组件
 		// uncomment the following to enable URLs in path-format
-		/*
-		'urlManager'=>array(
-			'urlFormat'=>'path',
-			'rules'=>array(
-				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
-				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
-				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
-			),
-		),
-		*/
+	   
+	   // 2015年10月2日20:14:15
+	 // 'urlManager'=>array(
+  //      'urlFormat'=>'path',
+  //      'rules'=>array(
+  //          //1.user/login.html ===> user/login
+  //          'user/login'=>array('user/login','urlSuffix'=>'.html'),
+           
+  //          //user/register.html  ===>  user/register
+  //          'user/register'=>array('user/register','urlSuffix'=>'.html'),
+           
+  //          //2.goods/20   ====>  goods/detail&id=20
+  //          'goods/<id:\d+>' => 'goods/detail',
+           
+  //          //goods/20/zhangsan  ===> goods/category&id=20&name=zhangsan
+  //          'goods/<id:\d+>/<name:[a-z]+>'=>'goods/category',
+           
+  //          //3.goods/4-2-3-5.html  ===> goods/category&brand=4&price2&color=3&screen=5
+  //          'goods/<brand:\d+>-<price:\d+>-<color:\d+>-<screen:\d+>'=>array('goods/category','urlSuffix'=>'.html'),
+  //                  ),
+  //                  ),
+		
 		'db'=>array(
 			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
 		),
