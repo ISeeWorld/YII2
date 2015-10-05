@@ -2,10 +2,7 @@
 require("config.php") ;
 $db=mysql_connect($dbhost,$dbuser,$dbpassword);
 mysql_select_db($dbdatebase,$db);
-echo "db is ok";
-
  ?>
-
 <!DOCTYPE html>
 <html>
 <head>
